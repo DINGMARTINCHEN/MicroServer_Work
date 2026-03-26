@@ -1,8 +1,8 @@
-package service.impl;
+package com.dingshicheng23090200150.cloud.service.impl;
 
-import entities.Pay;
+import com.dingshicheng23090200150.cloud.entities.Pay;
+import com.dingshicheng23090200150.cloud.service.PayService;
 import mapper.PayMapper;
-import service.PayService;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 

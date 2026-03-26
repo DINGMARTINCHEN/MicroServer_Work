@@ -1,6 +1,6 @@
-package service;
+package com.dingshicheng23090200150.cloud.service;
 
-import entities.Pay;
+import com.dingshicheng23090200150.cloud.entities.Pay;
 
 import java.util.List;
 

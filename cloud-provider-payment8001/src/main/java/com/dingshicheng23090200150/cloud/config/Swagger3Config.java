@@ -1,4 +1,4 @@
-package config;
+package com.dingshicheng23090200150.cloud.config;
 
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;

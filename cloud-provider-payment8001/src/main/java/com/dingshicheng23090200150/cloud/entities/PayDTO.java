@@ -1,4 +1,4 @@
-package entities;
+package com.dingshicheng23090200150.cloud.entities;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
