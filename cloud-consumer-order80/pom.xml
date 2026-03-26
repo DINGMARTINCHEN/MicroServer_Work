@@ -6,8 +6,9 @@
 
     <parent>
         <groupId>com.dingshicheng23090200150</groupId>
-        <artifactId>mscloudV5</artifactId>
+        <artifactId>dsc50</artifactId>          <!-- 改为正确的父工程 artifactId -->
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath> <!-- 明确指定父 POM 相对路径 -->
     </parent>
 
     <artifactId>cloud-consumer-order80</artifactId>
@@ -28,52 +29,35 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!-- Lombok -->
+
+        <!-- Lombok (只保留一个，版本由父工程管理) -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
         <!-- Hutool -->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
         </dependency>
+
+        <!-- 删除下面这些多余依赖，它们已在父工程管理或不需要 -->
+        <!--
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
-            <version>4.0.4</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>7.0.6</version>
-            <scope>compile</scope>
         </dependency>
+        -->
     </dependencies>
 
     <build>
