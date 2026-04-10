@@ -2,16 +2,15 @@ package com.dingshicheng23090200150.cloud.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
 @Table(name = "t_pay")
+@Data
 @ToString
 @Schema(title = "支付交易表Entity")
 public class Pay {
@@ -31,9 +30,11 @@ public class Pay {
     @Schema(title = "用户账号ID")
     private Integer userId;
 
+    @Column(name = "amount")
     @Schema(title = "交易金额")
     private BigDecimal amount;
 
+    @Column(name = "deleted")
     @Schema(title = "删除标志,0不删1删")
     private Byte deleted;
 
@@ -46,6 +47,4 @@ public class Pay {
     @Schema(title = "更新时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date updateTime;
-
-    // 省略getter/setter（生成器已自动生成）
 }
