@@ -1,8 +1,8 @@
 package com.dingshicheng23090200150.cloud.controller;
 
 import com.dingshicheng23090200150.cloud.entities.Pay;
-import com.dingshicheng23090200150.cloud.entities.PayDTO;
-import com.dingshicheng23090200150.cloud.resp.ResultData;
+import com.dingshicheng23090200150.cloudapicommons.entities.PayDTO;
+import com.dingshicheng23090200150.cloudapicommons.resp.ResultData;
 import com.dingshicheng23090200150.cloud.service.PayService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

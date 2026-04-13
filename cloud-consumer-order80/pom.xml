@@ -26,7 +26,7 @@
         </dependency>
         <!-- 引入自己定义的api通用包 -->
         <dependency>
-            <groupId>com.dingshicheng23090200150.cloud</groupId>
+            <groupId>com.dingshicheng23090200150</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
@@ -59,6 +59,12 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dingshicheng23090200150</groupId>
+            <artifactId>cloud-provider-payment8001</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
     <build>
