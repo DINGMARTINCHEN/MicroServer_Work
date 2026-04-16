@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 @Getter
 public enum ReturnCodeEnum {
+
     RC999("999", "操作XXX失败"),
     RC200("200", "success"),
     RC201("201", "服务开启降级保护,请稍后再试!"),
@@ -16,6 +17,7 @@ public enum ReturnCodeEnum {
     RC404("404", "404页面找不到的异常"),
     RC500("500", "系统异常,请稍后重试"),
     RC375("375", "数学运算异常,请稍后重试"),
+
     INVALID_TOKEN("2001", "访问令牌不合法"),
     ACCESS_DENIED("2003", "没有权限访问该资源"),
     CLIENT_AUTHENTICATION_FAILED("1001", "客户端认证失败"),
