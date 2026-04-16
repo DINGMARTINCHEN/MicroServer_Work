@@ -28,10 +28,10 @@ public class Swagger3Config {
         return new OpenAPI()
                 .info(new Info()
                         .title("支付微服务API文档")
-                        .description("冯子力-23090200149 - 支付微服务CRUD接口")
+                        .description("丁士程-23090200150 - 支付微服务CRUD接口")
                         .version("v1.0"))
                 .externalDocs(new ExternalDocumentation()
                         .description("微服务架构实验文档")
-                        .url("https://www.atguigu.com/"));
+                        .url("https://www.dsc23090200150.com/"));
     }
 }
