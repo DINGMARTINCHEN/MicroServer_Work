@@ -11,6 +11,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import org.springframework.beans.factory.annotation.Value;
 
 @RestController
 @Tag(name = "支付微服务模块", description = "支付交易CRUD接口")
@@ -19,6 +20,9 @@ public class PayController {
 
     @Resource
     private PayService payService;
+
+    @Value("${server.port}")
+    private String serverPort;
 
     @PostMapping("/add")
     @Operation(summary = "新增支付流水", description = "传入JSON串，新增支付记录")
@@ -57,5 +61,11 @@ public class PayController {
     public ResultData<List<Pay>> getAll() {
         List<Pay> payList = payService.getAll();
         return ResultData.success(payList);
+    }
+
+    @GetMapping("/getPort")
+    @Operation(summary = "获取服务端口号", description = "返回当前服务的端口号")
+    public ResultData<String> getPort() {
+        return ResultData.success("当前服务端口号：" + serverPort);
     }
 }

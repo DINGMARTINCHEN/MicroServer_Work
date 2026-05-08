@@ -24,6 +24,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
+        <!--SpringCloud OpenFeign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
         <!-- 引入自己定义的api通用包 -->
         <dependency>
             <groupId>com.dingshicheng23090200150</groupId>
