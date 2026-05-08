@@ -34,4 +34,10 @@ public class OrderController
     {
         return payFeignService.getPort();
     }
+
+    @GetMapping("/consumer/pay/getPortWithRetry")
+    public ResultData getPortWithRetry()
+    {
+        return payFeignService.getPortWithRetry();
+    }
 }

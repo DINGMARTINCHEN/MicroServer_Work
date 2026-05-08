@@ -11,6 +11,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Random;
 import org.springframework.beans.factory.annotation.Value;
 
 @RestController
@@ -20,6 +21,7 @@ public class PayController {
 
     @Resource
     private PayService payService;
+    private Random random = new Random();
 
     @Value("${server.port}")
     private String serverPort;
@@ -67,5 +69,14 @@ public class PayController {
     @Operation(summary = "获取服务端口号", description = "返回当前服务的端口号")
     public ResultData<String> getPort() {
         return ResultData.success("当前服务端口号：" + serverPort);
+    }
+
+    @GetMapping("/getPortWithRetry")
+    @Operation(summary = "获取服务端口号(带重试测试)", description = "模拟随机失败，用于测试OpenFeign重试机制")
+    public ResultData<String> getPortWithRetry() {
+        if (random.nextBoolean()) {
+            throw new RuntimeException("随机失败 - 服务端口: " + serverPort);
+        }
+        return ResultData.success("调用成功 - 当前服务端口号：" + serverPort);
     }
 }
